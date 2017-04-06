@@ -1,4 +1,5 @@
-{% set version = "0.3" %}
+{% set version = "0.4" %}
+{% set ot_version = "1.9rc1" %}
 
 package:
   name: otfftw
@@ -7,34 +8,34 @@ package:
 source:
   fn: otfftw-{{ version }}.tar.gz  # [not win]
   url: https://github.com/openturns/otfftw/archive/v{{ version }}.tar.gz  # [not win]
-  sha256: fc961af003f53419f9f9c2efd0caf002cc2eb43fa5c076a2e44cbd9542a15b26  # [not win]
+  sha256: d2181ef88997787e297d5158d51f734a97de6a6147de4febf094ca2290c4f8fc  # [not win]
 
   fn: otfftw-{{ version }}-py2.7-i686.exe  # [win32 and py27]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py2.7-i686.exe  # [win32 and py27]
-  sha256: ee29f72a49cf232b842c3755d96e9f57cbf836e86306de6a92fd61607748e373  # [win32 and py27]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py2.7-i686.exe  # [win32 and py27]
+  sha256: 62d302ef3e7282550634a518d8f5a36b00bfcd97c5f0306152f302132d281f53  # [win32 and py27]
 
   fn: otfftw-{{ version }}-py2.7-x86_64.exe  # [win64 and py27]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py2.7-x86_64.exe  # [win64 and py27]
-  sha256: 397e40e46ae24b2efbb23a16a2b1d78d79308006d279db6e6c158a04133a11b4  # [win64 and py27]
-
-  fn: otfftw-{{ version }}-py3.4-i686.exe  # [win32 and py34]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py3.4-i686.exe  # [win32 and py34]
-  sha256: 8a6e62e73b672891d62281acca2e483fb92dbe6be0d20ad64f77b0b139bbc292  # [win32 and py34]
-
-  fn: otfftw-{{ version }}-py3.4-x86_64.exe  # [win64 and py34]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py3.4-x86_64.exe  # [win64 and py34]
-  sha256: 04511b14ec1cf5bd7f30bd932031edf019a75296aac3e2f4b14f3ab122daf798  # [win64 and py34]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py2.7-x86_64.exe  # [win64 and py27]
+  sha256: 5b7764c407d06ee8c9db2a8fb359b87500a9391cd226d3bcf4bea11ad596d912  # [win64 and py27]
 
   fn: otfftw-{{ version }}-py3.5-i686.exe  # [win32 and py35]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py3.5-i686.exe  # [win32 and py35]
-  sha256: 91b3d234b398c6e2a80d124f270d906755feb18519f33f5ddd587ef4fcc8cfd5  # [win32 and py35]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py3.5-i686.exe  # [win32 and py35]
+  sha256: b081a2deb4dafa60cd0d892d4a1beffbf60db2c17030f40db2e3b7627b769c38  # [win32 and py35]
 
   fn: otfftw-{{ version }}-py3.5-x86_64.exe  # [win64 and py35]
-  url: https://github.com/openturns/build/releases/download/v1.8/otfftw-{{ version }}-py3.5-x86_64.exe  # [win64 and py35]
-  sha256: 369392dff5451350794b72c06927c7c4ca8254e0474339741dc48e3dce5ab3db  # [win64 and py35]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py3.5-x86_64.exe  # [win64 and py35]
+  sha256: bd3184f637c6180a2677945402a57683776e0619afde1c036faf50dfb6bfba78  # [win64 and py35]
+
+  fn: otfftw-{{ version }}-py3.6-i686.exe  # [win32 and py36]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py3.6-i686.exe  # [win32 and py36]
+  sha256: 6bf4c18a636c071a067f2d721c930df4f51d89328887c76a1fdbf3cec8bef491  # [win32 and py36]
+
+  fn: otfftw-{{ version }}-py3.6-x86_64.exe  # [win64 and py36]
+  url: https://github.com/openturns/build-module/releases/download/v{{ ot_version }}/otfftw-{{ version }}-py3.6-x86_64.exe  # [win64 and py36]
+  sha256: f845a28e8da3ec9102e6ea58548a55b57895d3a356541578d2087c2f5d5bb263  # [win64 and py36]
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -56,7 +57,7 @@ test:
 
 about:
   home: http://openturns.org/
-  license: LGPLv3
+  license: LGPL3
   license_file: COPYING.LESSER  # [not win]
   summary: FFTW module
 
