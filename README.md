@@ -3,7 +3,7 @@ About otfftw
 
 Home: http://openturns.org/
 
-Package license: LGPL-3.0-or-later
+Package license: GPL-3.0-or-later
 
 Feedstock license: BSD 3-Clause
 
