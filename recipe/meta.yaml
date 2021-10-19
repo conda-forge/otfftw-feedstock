@@ -10,7 +10,7 @@ source:
   sha256: 1ffe121db8a185d5080012c6172a912cb967c5137520a706655d2045c25aae59
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('otfftw', max_pin='x.x') }}
 
@@ -24,11 +24,11 @@ requirements:
   host:
     - python
     - fftw  # [not win]
-    - openturns 1.17*
+    - openturns 1.18*
   run:
     - python
     - fftw  # [not win]
-    - openturns 1.17*
+    - openturns 1.18*
 
 test:
   imports:
