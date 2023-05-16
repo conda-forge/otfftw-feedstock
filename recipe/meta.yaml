@@ -1,4 +1,4 @@
-{% set version = "0.12" %}
+{% set version = "0.13" %}
 
 package:
   name: otfftw
@@ -7,10 +7,10 @@ package:
 source:
   fn: otfftw-{{ version }}.tar.gz
   url: https://github.com/openturns/otfftw/archive/v{{ version }}.tar.gz
-  sha256: 8ea530ed3a68c0bb8528256bc2e39732431a3429e6215c6662eda9a0936c7cc8
+  sha256: 518d527a37651e84647de2c090a1fa8a5ac0a9d83c58204bad50651c405f70bb
 
 build:
-  number: 2
+  number: 0
   run_exports:
     - {{ pin_subpackage('otfftw', max_pin='x.x') }}
 
