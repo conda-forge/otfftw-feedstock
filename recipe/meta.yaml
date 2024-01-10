@@ -25,11 +25,11 @@ requirements:
   host:
     - python
     - fftw  # [not win]
-    - openturns 1.21*
+    - openturns 1.22*
   run:
     - python
     - fftw  # [not win]
-    - openturns 1.21*
+    - openturns 1.22*
 
 test:
   imports:
