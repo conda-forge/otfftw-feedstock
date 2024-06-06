@@ -26,7 +26,6 @@ requirements:
   host:
     - python
     - fftw  # [not win]
-    - libcblas
     - openturns
   run:
     - python
