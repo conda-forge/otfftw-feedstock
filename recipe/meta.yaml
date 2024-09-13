@@ -10,7 +10,7 @@ source:
   sha256: d83eec5bb540bb44af5e081fe53b76f0a07d3ea9098c274528898ac2103057ad
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('otfftw', max_pin='x.x') }}
 
