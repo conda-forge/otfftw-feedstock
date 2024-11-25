@@ -6,7 +6,6 @@ cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_RPATH="${PREFIX}/lib" \
   -DPython_FIND_STRATEGY=LOCATION \
   -DPython_ROOT_DIR=${PREFIX} \
-  -DBUILD_DOC=OFF \
   -B build .
 
 cmake --build build --target install --parallel ${CPU_COUNT}
