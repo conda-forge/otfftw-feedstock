@@ -10,7 +10,7 @@ source:
   sha256: 76b854f95e2f3e9278274352b6134321943838a1e3c7420408b29bc8137647b2
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('otfftw', max_pin='x.x') }}
 
@@ -20,18 +20,18 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cmake
     - make  # [unix]
+    - ninja  # [win]
     - swig
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - curl  # [win]
   host:
     - python
-    - fftw  # [not win]
+    - fftw
     - openturns
   run:
     - python
-    - fftw  # [not win]
+    - fftw
     - openturns
 
 test:
