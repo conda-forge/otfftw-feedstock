@@ -1,0 +1,60 @@
+context:
+  version: "0.18"
+
+package:
+  name: otfftw
+  version: ${{ version }}
+
+source:
+  url: https://github.com/openturns/otfftw/archive/v${{ version }}.tar.gz
+  sha256: 76b854f95e2f3e9278274352b6134321943838a1e3c7420408b29bc8137647b2
+
+build:
+  number: 3
+  python:
+    version_independent: true
+
+requirements:
+  build:
+    - cmake
+    - swig
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - if: unix
+      then: make
+      else: ninja
+    - if: win
+      then: m2-diffutils
+    - if: build_platform != target_platform
+      then:
+        - python-abi3 ${{ python_min }}.*
+        - python ${{ python_min }}.*
+        - cross-python_${{ target_platform }}
+  host:
+    - python-abi3 ${{ python_min }}.*
+    - python ${{ python_min }}.*
+    - openturns
+    - fftw
+  run:
+    - python >=${{ python_min }}
+  run_exports:
+    - ${{ pin_subpackage('otfftw', upper_bound='x.x') }}
+
+tests:
+  - python:
+      imports:
+        - otfftw
+
+about:
+  homepage: http://openturns.org/
+  license: GPL-3.0-or-later
+  license_family: GPL
+  license_file: COPYING
+  summary: FFTW module
+  documentation: https://openturns.github.io/otfftw/master/
+  repository: https://github.com/openturns/otfftw
+
+extra:
+  recipe-maintainers:
+    - jschueller
